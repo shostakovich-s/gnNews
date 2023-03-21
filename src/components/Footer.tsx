@@ -1,5 +1,6 @@
-import React from 'react'
+import { useCurrentTime } from '../hooks'
 
 export const Footer = () => {
-  return <div>Footer</div>
+  const currentTime = useCurrentTime()
+  return <div>{currentTime}</div>
 }
