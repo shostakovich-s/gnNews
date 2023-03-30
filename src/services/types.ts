@@ -4,7 +4,7 @@ export interface CountryNewsResponse {
     articles: Article[]
 }
 
-type Article = {
+export type Article = {
         "source": {
             "id": string
             "name": string

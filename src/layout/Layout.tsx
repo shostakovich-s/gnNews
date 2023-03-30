@@ -13,7 +13,6 @@ export const Layout = () => {
       <Header />
       <div>
         <Sidebar />
-        <NewsContainer />
         <Outlet />
       </div>
       <Footer />

@@ -1,8 +1,13 @@
 import { useCurrentTime } from '../hooks'
 import { useGetCountryByNameQuery } from '../services/getApiData'
+import { useSelector } from 'react-redux'
+import { RootState } from '../services/store'
 
 export const Footer = () => {
-  const { data, error, isLoading } = useGetCountryByNameQuery('gb')
+  const countryViewState = useSelector(
+    (state: RootState) => state.countryState.countryViewState,
+  )
+  const { data, error, isLoading } = useGetCountryByNameQuery(countryViewState)
   const currentTime = useCurrentTime()
   return (
     <div>
